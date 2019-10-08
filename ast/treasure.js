@@ -74,6 +74,7 @@ const store = new Vuex.Store({
       state.expeditionsMessage = "No more expeditions left :(";
       state.markMessage = "We were so close...";
       state.restartMessage = "Play Again!";
+      state.showDisclaimer = true;
     },
 
     restart: state => {

@@ -150,9 +150,9 @@ body {
 }
 
 .d__closer {
-  top: 25px;
-  right: 10px;
-  font-size: 2em;
+  top: 2em;
+  right: 2em;
+  font-size: 3em;
   color: brown;
   -webkit-transition: .5s;
     -moz-transition: .5s;
