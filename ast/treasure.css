@@ -1,0 +1,200 @@
+/* Map */
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background: url(treasure_map.jpg) no-repeat;
+    background-size: 100% 100%;
+    background-color: lavender;
+    overflow-x: hidden;
+    z-index: 0;
+}
+
+/*
+  Modal window
+*/
+
+.modal-mask {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+  display: table;
+  transition: opacity .3s ease;
+  z-index: 5;
+}
+
+.modal-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.modal-container {
+  width: 300px;
+  margin: 0px auto;
+  padding: 20px 30px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+  transition: all .3s ease;
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: justify;
+}
+
+.modal-header h3 {
+  margin-top: 0;
+  color: #42b983;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.modal-body {
+  margin: 20px 0;
+}
+
+.modal-default-button {
+  display: block;
+  margin-top: 20px;
+  padding: 5px;
+  font-size: 1.3em;
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+.modal-default-button:hover {
+  background-color: rgba(128, 128, 128, .33);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+}
+
+.modal-enter {
+  opacity: 0;
+}
+
+.modal-leave-active {
+  opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-conteiner {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+#show-modal, #restart {
+  float: right;
+  padding: 5px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.5s;
+  background-color: rgba(196, 196, 196, .11);
+}
+#restart {
+  margin-left: 20px;
+  background-color: rgba(255, 164, 164, .33);
+}
+
+#show-modal:hover {
+  background-color: rgba(164, 164, 164, .33);
+  box-shadow: 0 2px 8px rgba(64, 64, 64, .33);
+}
+
+#restart:hover {
+  background-color: rgba(255, 128, 128, .33);
+  box-shadow: 0 2px 8px rgba(196, 64, 64, .33);
+}
+
+
+/* Guard-body panel */
+.content__disclaimer {
+  display: block;
+  position: relative;
+  margin: 25px;
+  border: 2px solid goldenrod;
+  border-radius: 10px;
+  background: linear-gradient(to right top, rgba(0, 196, 0, 0.6),
+              rgba(255, 255, 255, 0.7));
+  color: grey;
+  transition: .5s;
+  z-index: 3;
+}
+.content__disclaimer:hover {
+  color: darkblue;
+}
+
+.content__disclaimer legend {
+  text-shadow: black 0 0 1px;
+  font-family: "Comic Sans MS", cursive;
+  font-style: italic;
+  font-size: 2em;
+  color: lavender;
+}
+
+.content__disclaimer p {
+  padding: 5px 25px;
+  text-shadow: black 0 0 1px;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+/* disclaimer control buttons */
+.content__disclaimer_control {
+  display: inline-block;
+  position: absolute;
+  cursor: pointer;
+}
+
+.d__closer {
+  top: 25px;
+  right: 10px;
+  font-size: 2em;
+  color: brown;
+  -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+.d__closer:hover {
+  -webkit-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  transform: scale(1.15);
+}
+
+.d__opener {
+  top: 35px;
+  right: 35px;
+  padding: 5px;
+  border: 2px solid darkgreen;
+  background: rgba(0, 128, 0, 0.2);
+  text-shadow: black 0 0 2px;
+  font-family: Comic Sans MS cursive;
+  color: white;
+}
+
+
+/* Treasure marks */
+.treasure-mark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(200, 200, 255, 0.8);
+  margin: 0;
+  padding: 5px 10px;
+  border: 5px solid white;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.treasure {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  z-index: 2;
+}
