@@ -144,6 +144,7 @@ const store = new Vuex.Store({
       state.expeditionsMessage = "Expedition №" + state.expeditions
         + " was lucky one!";
       state.markMessage = "We found it there!";
+      state.showDisclaimer = true;
       state.restartMessage = "Play Again!";
       state.game = false;
     }
